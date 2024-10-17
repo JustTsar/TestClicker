@@ -11,10 +11,10 @@ namespace Core.Wallet
     { 
         private GameSettings _gameSettings;
         
-        private Core.Wallet.Wallet _wallet;
+        private Wallet _wallet;
         private readonly Subscriptions _subscriptions = new Subscriptions();
 
-        public void Init(GameSettings gameSettings, Core.Wallet.Wallet wallet)
+        public void Init(GameSettings gameSettings, Wallet wallet)
         {
             _gameSettings = gameSettings;
             _wallet = wallet;
@@ -22,7 +22,7 @@ namespace Core.Wallet
 
         private void AddMoneyInWalletByTap()
         {
-            var value = _gameSettings.ValuePerTap + GetPercentForFarm();
+            var value = _gameSettings.ValuePerTap + GetPercentForFarm() * _gameSettings.TapFactor;
             
             _wallet.AddMoney(value);
             EffectController.Instance.SpawnEffect(value);

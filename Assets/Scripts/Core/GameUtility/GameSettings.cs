@@ -10,11 +10,16 @@ namespace Core.GameUtility
         [SerializeField] private float _timeToGetFarmMoney;
         [SerializeField] private float _energyPerTap;
         [SerializeField] private float _maxEnergy;
+        
+        [Space]
+        
+        [SerializeField] private float _tapFactor = 1f;
 
         public float EnergyPerTap => _energyPerTap;
         public float ValuePerTap => _valuePerTap;
         public float ValuePerTime => _valuePerTime;
         public float TimeToGetFarmMoney => _timeToGetFarmMoney;
         public float MaxEnergy => _maxEnergy;
+        public float TapFactor => _tapFactor;
     }
 }
