@@ -1061,7 +1061,7 @@ GameObject:
   - component: {fileID: 1139111446}
   - component: {fileID: 1139111445}
   m_Layer: 0
-  m_Name: TapController
+  m_Name: WalletController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
